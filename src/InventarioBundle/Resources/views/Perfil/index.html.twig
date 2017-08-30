@@ -1,0 +1,72 @@
+{% extends '@Inventario/templateMaster.html.twig' %}
+
+{% block titleheader %}
+    Usuarios
+{% endblock %}
+
+
+{% block content %}
+    <!-- /.box -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="header">
+                        <form role="form">
+                            <h4 class="title">Listado de Usuario</h4>
+                            <div class="box-tools">
+                                <button type="button" class="btn btn-sm btn-success pull-right" onclick="location.href='{{ path('inventario_new_user') }}'">Alta de usuarios</button>
+                            </div>
+                            <!-- /.box-tools -->
+                        </form>
+                    </div>
+                    <div class="content table-responsive table-full-width">
+                        <table id="proveedores" class="table table-striped">
+                            <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Proveedor</th>
+                                <th>Nombre del Producto</th>
+                                <th>Cantidad</th>
+                                <th>En Stock</th>
+                                <th>Precio</th>
+                                {#<th>Contacto</th>#}
+                                <th>Editar</th>
+                                {#<th>Vista Previa</th>#}
+                                <th>Eliminar</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {% for usuario in usuarios %}
+                                <tr>
+                                    {#<td>{{ usuario.id }}</td>#}
+                                    {#<td><a href="{{ path('inventario_proveedores_edit',{'proveedor':usuario.proveedor.id}) }}">{{ usuario.proveedor.razonSocial }}</a></td>#}
+                                    {#<td>{{ usuario.usuario }}</td>#}
+                                    {#<td>{{ usuario.cantidad }}</td>#}
+                                    {#<td>{{ usuario.enStock }}</td>#}
+                                    {#<td>${{ usuario.precioVta|number_format(2, '.', ',') }}</td>#}
+                                    {#<td><button type="button" class="btn btn-info btn-xs" onclick="location.href='{{ path('inventario_usuarios_edit',{'usuario': usuario.id}) }}'">Editar</button></td>#}
+                                    {#<td><button type="buuton" class="btn btn-info btn-xs" onclick="location.href='#'">Vista previa</button></td>#}
+                                    {#<td><button type="button" id="eliminar" class="btn btn-info btn-xs" onclick="location.href='{{ path('inventario_usuario_delete',{'usuario': usuario.id}) }}'">Eliminar</button></td>#}
+                                </tr>
+                            {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.col -->
+{% endblock %}
+
+{% block javascripts %}
+    <script>
+        window.onload = function(){
+            var contador = 0;
+            document.getElementById("eliminar").onclick = function(){
+                alert(confirm("¿Desea eliminar el proveedor?"));
+            }
+        }
+    </script>
+{% endblock %}

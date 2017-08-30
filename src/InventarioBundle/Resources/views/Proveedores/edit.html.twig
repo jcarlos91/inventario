@@ -1,0 +1,37 @@
+{% extends '@Inventario/templateMaster.html.twig' %}
+{% block content %}
+    <div class="col-md-12">
+        <div class="box">
+            {{ form_start(form) }}
+            {{ form_errors(form) }}
+
+            {{ form_label(form.razonSocial) }}
+            {{ form_widget(form.razonSocial) }}
+            {{ form_errors(form.razonSocial) }}
+
+            {{ form_label(form.direccion,'Dirección') }}
+            {{ form_widget(form.direccion) }}
+            {{ form_errors(form.direccion) }}
+
+            {{ form_label(form.rfc, 'RFC') }}
+            {{ form_widget(form.rfc) }}
+            {{ form_errors(form.rfc) }}
+
+            {{ form_label(form.telefono,'Teléfono') }}
+            {{ form_widget(form.telefono) }}
+            {{ form_errors(form.telefono) }}
+
+            {{ form_label(form.mail) }}
+            {{ form_widget(form.mail) }}
+            {{ form_errors(form.mail) }}
+
+            {{ form_label(form.contacto) }}
+            {{ form_widget(form.contacto) }}
+            {{ form_errors(form.contacto) }}
+            <br>
+            {{ form_widget(form.save, { 'label': 'Guardar' }) }}
+            <input type="button" class="btn btn-danger" onclick="location.href = '{{ path('inventario_proveedores') }}'" value="Regresar">
+            {{ form_end(form) }}
+        </div>
+    </div>
+{% endblock %}

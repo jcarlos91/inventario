@@ -1,0 +1,5 @@
+inventario:
+    resource: "@InventarioBundle/Resources/config/routing.yml"
+    prefix:   /admin
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/security.xml"

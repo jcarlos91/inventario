@@ -1,0 +1,46 @@
+{% extends '@Inventario/templateMaster.html.twig' %}
+{% block titleheader %}
+    Alta de Productos
+{% endblock %}
+{% block content %}
+<div class="row">
+    <div class="col-md-12">
+        {{ form_start(form) }}
+        {{ form_errors(form) }}
+        <div class="form-group">
+            {{ form_label(form.producto) }}
+            {{ form_widget(form.producto) }}
+            {{ form_errors(form.producto) }}
+        </div>
+
+        <div class="form-group">
+            {{ form_label(form.cantidad) }}
+            {{ form_widget(form.cantidad) }}
+            {{ form_errors(form.cantidad) }}
+        </div>
+
+        <div class="form-group">
+            {{ form_label(form.enStock) }}
+            {{ form_widget(form.enStock) }}
+            {{ form_errors(form.enStock) }}
+        </div>
+
+        <div class="form-group">
+            {{ form_label(form.precioVta,'Precio de venta') }}
+            {{ form_widget(form.precioVta) }}
+            {{ form_errors(form.precioVta) }}
+        </div>
+
+        <div class="form-group">
+            {{ form_label(form.proveedor) }}
+            {{ form_widget(form.proveedor) }}
+            {{ form_errors(form.proveedor) }}
+        </div>
+        {{ form_widget(form.save, { 'label': 'Guardar' }) }}
+        <input type="button" class="btn btn-danger" onclick="location.href = '{{ path('inventario_productos') }}'" value="Regresar">
+        {{ form_end(form) }}
+    </div>
+</div>
+
+{% endblock %}
+

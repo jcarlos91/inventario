@@ -1,0 +1,53 @@
+{% extends '@Inventario/templateMaster.html.twig' %}
+{% block titleheader %}
+    Alta de Proovedores
+{% endblock %}
+{% block content %}
+    <div class="row">
+        <div class="col-md-12">
+            {{ form_start(form) }}
+            {{ form_errors(form) }}
+
+            <div class="form-group">
+                {{ form_label(form.razonSocial) }}
+                {{ form_widget(form.razonSocial) }}
+                {{ form_errors(form.razonSocial) }}
+            </div>
+
+            <div class="form-group">
+                {{ form_label(form.direccion,'Dirección') }}
+                {{ form_widget(form.direccion) }}
+                {{ form_errors(form.direccion) }}
+            </div>
+
+            <div class="form-group">
+                {{ form_label(form.rfc, 'RFC') }}
+                {{ form_widget(form.rfc) }}
+                {{ form_errors(form.rfc) }}
+            </div>
+
+            <div class="form-group">
+                {{ form_label(form.telefono,'Teléfono') }}
+                {{ form_widget(form.telefono) }}
+                {{ form_errors(form.telefono) }}
+            </div>
+
+            <div class="form-group">
+                {{ form_label(form.mail) }}
+                {{ form_widget(form.mail) }}
+                {{ form_errors(form.mail) }}
+            </div>
+
+            <div class="form-group">
+                {{ form_label(form.contacto) }}
+                {{ form_widget(form.contacto) }}
+                {{ form_errors(form.contacto) }}
+            </div>
+
+                {{ form_widget(form.save, { 'label': 'Guardar' }) }}
+                <input type="button" class="btn btn-danger" onclick="location.href = '{{ path('inventario_proveedores') }}'" value="Regresar">
+            {{ form_end(form) }}
+        </div>
+    </div>
+{% endblock %}
+

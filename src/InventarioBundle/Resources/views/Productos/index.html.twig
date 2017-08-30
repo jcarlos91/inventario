@@ -1,0 +1,73 @@
+{% extends '@Inventario/templateMaster.html.twig' %}
+
+{% block titleheader %}
+    Productos
+{% endblock %}
+
+
+{% block content %}
+<!-- /.box -->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="header">
+                    <form role="form">
+                        <h4 class="title">Listado de Productos</h4>
+                        {{ "now"|localizeddate('none', 'none', app.request.locale, "America/Mexico_City", "cccc d MMMM Y")  }}
+                        <div class="box-tools">
+                            <button type="button" class="btn btn-sm btn-success pull-right" onclick="location.href='{{ path('inventario_productos_new') }}'">Alta de producto</button>
+                        </div>
+                        <!-- /.box-tools -->
+                    </form>
+                </div>
+                <div class="content table-responsive table-full-width">
+                    <table id="proveedores" class="table table-striped">
+                        <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Proveedor</th>
+                            <th>Nombre del Producto</th>
+                            <th>Cantidad</th>
+                            <th>En Stock</th>
+                            <th>Precio</th>
+                            {#<th>Contacto</th>#}
+                            <th>Editar</th>
+                            {#<th>Vista Previa</th>#}
+                            <th>Eliminar</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% for producto in productos %}
+                            <tr>
+                                <td>{{ producto.id }}</td>
+                                <td><a href="{{ path('inventario_proveedores_edit',{'proveedor':producto.proveedor.id}) }}">{{ producto.proveedor.razonSocial }}</a></td>
+                                <td>{{ producto.producto }}</td>
+                                <td>{{ producto.cantidad }}</td>
+                                <td>{{ producto.enStock }}</td>
+                                <td>${{ producto.precioVta|number_format(2, '.', ',') }}</td>
+                                <td><button type="button" class="btn btn-info btn-xs" onclick="location.href='{{ path('inventario_productos_edit',{'producto': producto.id}) }}'">Editar</button></td>
+                                {#<td><button type="buuton" class="btn btn-info btn-xs" onclick="location.href='#'">Vista previa</button></td>#}
+                                <td><button type="button" id="eliminar" class="btn btn-info btn-xs" onclick="location.href='{{ path('inventario_producto_delete',{'producto': producto.id}) }}'">Eliminar</button></td>
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /.col -->
+{% endblock %}
+
+{% block javascripts %}
+    <script>
+        window.onload = function(){
+            var contador = 0;
+            document.getElementById("eliminar").onclick = function(){
+                alert(confirm("¿Desea eliminar el proveedor?"));
+            }
+        }
+    </script>
+{% endblock %}

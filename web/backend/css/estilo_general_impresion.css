@@ -1,0 +1,340 @@
+body {
+    margin: 0px;
+    background-color: #ececec;
+}
+.txt8n {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 8pt;
+    font-style: normal;
+    color: #000000;
+    text-decoration: none;
+}
+.txt8g {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 8pt;
+    font-style: normal;
+    color: #333333;
+    text-decoration: none;
+}
+.txt8a {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 8pt;
+    font-style: normal;
+    color: #0033CC;
+    text-decoration: none;
+}
+.tit8n {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 8pt;
+    font-style: normal;
+    font-weight: bold;
+    color: #000000;
+    text-decoration: none;
+}
+.txt8r {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 8pt;
+    font-style: normal;
+    color: #993300;
+}
+.txt8v {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 8pt;
+    font-style: normal;
+    color: #993333;
+    text-decoration: none;
+}
+.legal8g {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 8pt;
+    font-style: normal;
+    color: #999999;
+}
+.liga8g {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 8pt;
+    font-style: normal;
+    color: #999999;
+}
+.txt9n {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 9pt;
+    font-style: normal;
+    color: #000000;
+}
+.txt10n {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10pt;
+    font-style: normal;
+    color: #000000;
+}
+.txt12n {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12pt;
+    font-style: normal;
+    color: #000000;
+}
+.txt8b {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 8pt;
+    font-style: normal;
+    color: #FFFFFF;
+}
+.txt9b {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 9pt;
+    font-style: normal;
+    color: #FFFFFF;
+}
+.txt10b {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10pt;
+    font-style: normal;
+    color: #FFFFFF;
+}
+.txt12b {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12pt;
+    font-style: normal;
+    color: #FFFFFF;
+}
+.txt8r {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 8pt;
+    font-style: normal;
+    color: #FF0000;
+}
+.txt9r {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 9pt;
+    font-style: normal;
+    color: #FF0000;
+}
+
+.liga8a {
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 8pt;
+
+    font-style: normal;
+
+    color: #0066FF;
+
+}
+
+.liga9a {
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 9pt;
+
+    font-style: normal;
+
+    color: #0066FF;
+
+}
+
+.tit8n {
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 8pt;
+
+    font-style: normal;
+
+    font-weight: bold;
+
+    color: #000000;
+
+}
+
+.tit9n {
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 9pt;
+
+    font-style: normal;
+
+    font-weight: bold;
+
+    color: #000000;
+
+}
+
+.tit10n {
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 10pt;
+
+    font-style: normal;
+
+    font-weight: bold;
+
+    color: #000000;
+
+}
+
+.tit12n {
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 12pt;
+
+    font-style: normal;
+
+    font-weight: bold;
+
+    color: #000000;
+
+}
+
+.tit8b {
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 8pt;
+
+    font-style: normal;
+
+    font-weight: bold;
+
+    color: #FFFFFF;
+
+}
+
+.tit9b {
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 9pt;
+
+    font-style: normal;
+
+    font-weight: bold;
+
+    color: #FFFFFF;
+
+}
+
+.tit10b {
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 10pt;
+
+    font-style: normal;
+
+    font-weight: bold;
+
+    color: #FFFFFF;
+
+}
+
+.tit12b {
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 12pt;
+
+    font-style: normal;
+
+    font-weight: bold;
+
+    color: #FFFFFF;
+
+}
+
+.liga8v {
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 8pt;
+
+    font-style: normal;
+
+    color: #669933;
+
+}
+
+.liga9v {
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 9pt;
+
+    font-style: normal;
+
+    color: #669933;
+
+}
+
+.txt7n {
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 7pt;
+
+    font-style: normal;
+
+    color: #666666;
+
+}
+
+.producto1 {
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 8pt;
+
+    font-style: normal;
+
+    color: #000000;
+
+    background-color: #00FFFF;
+
+}
+
+.producto2 {
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 8pt;
+
+    font-style: normal;
+
+    color: #000000;
+
+    background-color: #EE82EE;
+
+}
+
+.producto3 {
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 8pt;
+
+    font-style: normal;
+
+    color: #000000;
+
+    background-color: #00FF00;
+
+}
+
+.producto4 {
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 8pt;
+
+    font-style: normal;
+
+    color: #000000;
+
+    background-color: #0080FF;
+
+}

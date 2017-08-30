@@ -1,0 +1,161 @@
+{% extends '@Inventario/templateMaster.html.twig' %}
+
+{% block titleheader %}
+    Nuevo Usuario
+{% endblock %}
+
+
+{% block content %}
+    <div class="row">
+        <div class="col-md-12" >
+            {{ form_start(form) }}
+            {{ form_errors(form) }}
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        {{ form_label(form.name) }}
+                        {{ form_widget(form.name) }}
+                        {{ form_errors(form.name) }}
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        {{ form_label(form.apaterno,'Apellido Paterno') }}
+                        {{ form_widget(form.apaterno) }}
+                        {{ form_errors(form.apaterno) }}
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="form-group">
+                        {{ form_label(form.amaterno,'Apellido Materno') }}
+                        {{ form_widget(form.amaterno) }}
+                        {{ form_errors(form.amaterno) }}
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="form-group">
+                        {{ form_label(form.username) }}
+                        {{ form_widget(form.username) }}
+                        {{ form_errors(form.username) }}
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="form-group">
+                        {{ form_label(form.password) }}
+                        {{ form_widget(form.password) }}
+                        {{ form_errors(form.password) }}
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        {{ form_label(form.email) }}
+                        {{ form_widget(form.email) }}
+                        {{ form_errors(form.email) }}
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        {{ form_label(form.role) }}
+                        {{ form_widget(form.role) }}
+                        {{ form_errors(form.role) }}
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="form-group">
+                        {{ form_label(form.calle,'Dirección') }}
+                        {{ form_widget(form.calle) }}
+                        {{ form_errors(form.calle) }}
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="form-group">
+                        {{ form_label(form.numext,'Número Exterior') }}
+                        {{ form_widget(form.numext) }}
+                        {{ form_errors(form.numext) }}
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="form-group">
+                        {{ form_label(form.numIn,'Número Interior') }}
+                        {{ form_widget(form.numIn) }}
+                        {{ form_errors(form.numIn) }}
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        {{ form_label(form.delegacion) }}
+                        {{ form_widget(form.delegacion) }}
+                        {{ form_errors(form.delegacion) }}
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        {{ form_label(form.municipio) }}
+                        {{ form_widget(form.municipio) }}
+                        {{ form_errors(form.municipio) }}
+                    </div>
+
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        {{ form_label(form.cp,'Código Postal') }}
+                        {{ form_widget(form.cp) }}
+                        {{ form_errors(form.cp) }}
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="form-group">
+                        {{ form_label(form.telefono,'Teléfono fijo') }}
+                        {{ form_widget(form.telefono) }}
+                        {{ form_errors(form.telefono) }}
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        {{ form_label(form.telcel,'Teléfono Celular') }}
+                        {{ form_widget(form.telcel) }}
+                        {{ form_errors(form.telcel) }}
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        {{ form_label(form.sexo) }}
+                        {{ form_widget(form.sexo) }}
+                        {{ form_errors(form.sexo) }}
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        {{ form_label(form.estadocivil,'Estado Civil') }}
+                        {{ form_widget(form.estadocivil) }}
+                        {{ form_errors(form.estadocivil) }}
+                    </div>
+                </div>
+            </div>
+            <div class="text-center">
+                {{ form_widget(form.save, { 'label': 'Guardar' }) }}
+                <input type="button" class="btn btn-danger btn-fill btn-wd" onclick="location.href = '{{ path('inventario_users') }}'" value="Regresar">
+            </div>
+            {{ form_end(form) }}
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block javascripts %}
+
+{% endblock %}

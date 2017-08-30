@@ -1,0 +1,41 @@
+inventario_homepage:
+    path:     /
+    defaults: { _controller: InventarioBundle:Default:index }
+inventario_logout:
+    path:    /logout
+    defaults: { _controller: FOSUserBundle:Security:logout }
+#proveedores
+inventario_proveedores:
+    path:    /proveedores
+    defaults: { _controller: InventarioBundle:Proveedores:index }
+inventario_proveedores_new:
+    path:    /proveedores/new
+    defaults: { _controller: InventarioBundle:Proveedores:new }
+inventario_proveedores_edit:
+    path:    /proveedores/{proveedor}/edit
+    defaults: { _controller: InventarioBundle:Proveedores:edit }
+inventario_proveedores_delete:
+    path:    /proveedores/{proveedor}/delete
+    defaults: { _controller: InventarioBundle:Proveedores:delete }
+
+#PRODUCTOS
+inventario_productos:
+    path:    /productos
+    defaults: { _controller: InventarioBundle:Productos:index }
+inventario_productos_new:
+    path:    /productos/new
+    defaults: { _controller: InventarioBundle:Productos:new }
+inventario_productos_edit:
+    path:    /productos/{producto}/edit
+    defaults: { _controller: InventarioBundle:Productos:edit }
+inventario_producto_delete:
+    path:    /producto/{producto}/delete
+    defaults: { _controller: InventarioBundle:Producto:delete }
+
+#USUARIOS
+inventario_users:
+    path:    /usuarios
+    defaults: { _controller: InventarioBundle:Perfil:index }
+inventario_new_user:
+    path:   /usuarios/new
+    defaults: { _controller: InventarioBundle:Perfil:new }
